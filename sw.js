@@ -1,5 +1,5 @@
-var CACHE_NAME = "HD-cache";
-var urlsToCache = ["./.."];
+var CACHE_NAME = "bicycle-cache";
+var urlsToCache = ["."];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
