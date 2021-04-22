@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             UI.updateUsername();
-            UI.showDashboardView();
+            window.location.assign('front/1_mainMenu/index.html');
         } else {
             UI.showLoginView();
         }
