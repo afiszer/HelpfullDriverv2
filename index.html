@@ -100,30 +100,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-functions.js"></script>
     <script src="app.js"></script>
     <script>
-        document.getElementById('loginG').addEventListener('click', GoogleLogin)
-        document.getElementById('loginF').addEventListener('click', FacebookLogin)
-        
-        let provider1 = new firebase.auth.GoogleAuthProvider()
-        let provider2 = new firebase.auth.FacebookAuthProvider()
-        
-        function GoogleLogin(){
-          firebase.auth().signInWithPopup(provider1).then(() => {
-            window.location.assign('front/1_mainMenu/index.html');
-          })
-          .catch(error => {
-            console.error(error);
-          })
-        }
-        function FacebookLogin(){
-          firebase.auth().signInWithPopup(provider2).then(() => {
-            window.location.assign('front/1_mainMenu/index.html');
-          })
-          .catch(error => {
-            console.error(error);
-          })
-        }
-    </script>
-    <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('sw.js').then(function(registration) {
